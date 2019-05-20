@@ -7,12 +7,13 @@ public class MyFirstProgram {
 	  hello("world");
 	  hello("Amigo");
 
-	  double l = 5;
-    System.out.println("Площадь квадрата: " + area(l));
 
-    double a = 5.0;
-    double b = 6.0;
-    System.out.println("Площадь прямоугольника: " + area(a,b));
+	  Square s = new Square(5);
+    System.out.println("Площадь квадрата: " + s.area());
+
+
+    Rectangle r = new Rectangle(4,6);
+    System.out.println("Площадь прямоугольника: " + r.area());
       }
 
       public static void hello(String s) {
@@ -20,11 +21,7 @@ public class MyFirstProgram {
 
       }
 
-      public static double area (double l){
-        return l*l;
-      }
 
-      public static double area (double a, double b){
-        return a*b;
-      }
+
+
 }
