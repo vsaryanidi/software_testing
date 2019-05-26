@@ -27,7 +27,7 @@ public class ContactCreationTests {
   @Test
   public void testContactCreationTests() throws Exception {
     gotoContactAddPage();
-    fillContactForm();
+    fillContactForm(new ContactData("Germany, Munich", "Valerie", "Saryanidi", "+7 987 333 33 33", "vsaryanidi@gmail.com"));
     submitContactCreation();
     returnToHomePage();
   }
@@ -40,17 +40,17 @@ public class ContactCreationTests {
     wd.findElement(By.xpath("(//input[@name='submit'])[2]")).click();
   }
 
-  private void fillContactForm() {
+  private void fillContactForm(ContactData contactData) {
     wd.findElement(By.name("firstname")).clear();
-    wd.findElement(By.name("firstname")).sendKeys("Valerie");
+    wd.findElement(By.name("firstname")).sendKeys(contactData.getFirstname());
     wd.findElement(By.name("lastname")).clear();
-    wd.findElement(By.name("lastname")).sendKeys("Saryanidi");
+    wd.findElement(By.name("lastname")).sendKeys(contactData.getLastname());
     wd.findElement(By.name("address")).clear();
-    wd.findElement(By.name("address")).sendKeys("Germany, Munich");
+    wd.findElement(By.name("address")).sendKeys(contactData.getAddress());
     wd.findElement(By.name("home")).clear();
-    wd.findElement(By.name("home")).sendKeys("+7 987 333 33 33");
+    wd.findElement(By.name("home")).sendKeys(contactData.getHome_phone());
     wd.findElement(By.name("email")).clear();
-    wd.findElement(By.name("email")).sendKeys("vsaryanidi@gmail.com");
+    wd.findElement(By.name("email")).sendKeys(contactData.getEmail());
   }
 
   private void gotoContactAddPage() {
