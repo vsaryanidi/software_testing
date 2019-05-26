@@ -33,12 +33,12 @@ public class GroupCreationTests {
     initGroupCreation();
     fillGroupForm(new GroupData("TestGroup", "Test", "Group For Test"));
     submitGroupCreation();
-    returnToGroupPage().click();
+    returnToGroupPage();
 
   }
 
-  private WebElement returnToGroupPage() {
-    return wd.findElement(By.linkText("groups"));
+  private void returnToGroupPage() {
+    wd.findElement(By.linkText("groups")).click();
   }
 
   private void submitGroupCreation() {
