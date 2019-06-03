@@ -1,4 +1,4 @@
-package ru.sar.neo.addressbook;
+package ru.sar.neo.addressbook.model;
 
 public class GroupData {
   private final String name;

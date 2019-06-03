@@ -1,9 +1,10 @@
-package ru.sar.neo.addressbook;
+package ru.sar.neo.addressbook.tests;
 
 import java.util.concurrent.TimeUnit;
 import org.testng.annotations.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import ru.sar.neo.addressbook.model.ContactData;
 
 public class ContactCreationTests {
   private WebDriver wd;

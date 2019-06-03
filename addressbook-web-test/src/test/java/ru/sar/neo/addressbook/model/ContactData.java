@@ -1,4 +1,4 @@
-package ru.sar.neo.addressbook;
+package ru.sar.neo.addressbook.model;
 
 public class ContactData {
   private final String address;
