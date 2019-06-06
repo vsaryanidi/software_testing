@@ -9,39 +9,39 @@ import java.util.concurrent.TimeUnit;
 import static org.testng.Assert.assertTrue;
 
 public class ContactDeletionTests {
-  private WebDriver driver;
+  private WebDriver wd;
   private boolean acceptNextAlert = true;
 
   @BeforeMethod(alwaysRun = true)
   public void setUp() throws Exception {
-    driver = new FirefoxDriver();
-    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    wd = new FirefoxDriver();
+    wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
   @Test
   public void ContactDeletionTests() throws Exception {
-    driver.get("http://localhost/addressbook/");
-    driver.findElement(By.name("user")).clear();
-    driver.findElement(By.name("user")).sendKeys("admin");
-    driver.findElement(By.name("pass")).clear();
-    driver.findElement(By.name("pass")).sendKeys("secret");
-    driver.findElement(By.xpath("//input[@value='Login']")).click();
-    driver.findElement(By.name("selected[]")).click();
+    wd.get("http://localhost/addressbook/");
+    wd.findElement(By.name("user")).clear();
+    wd.findElement(By.name("user")).sendKeys("admin");
+    wd.findElement(By.name("pass")).clear();
+    wd.findElement(By.name("pass")).sendKeys("secret");
+    wd.findElement(By.xpath("//input[@value='Login']")).click();
+    wd.findElement(By.name("selected[]")).click();
     acceptNextAlert = true;
-    driver.findElement(By.xpath("//input[@value='Delete']")).click();
+    wd.findElement(By.xpath("//input[@value='Delete']")).click();
     assertTrue(closeAlertAndGetItsText().matches("^Delete 1 addresses[\\s\\S]$"));
-    driver.findElement(By.linkText("home")).click();
-    driver.findElement(By.linkText("Logout")).click();
+    wd.findElement(By.linkText("home")).click();
+    wd.findElement(By.linkText("Logout")).click();
   }
 
   @AfterMethod(alwaysRun = true)
   public void tearDown() throws Exception {
-    driver.quit();
+    wd.quit();
   }
 
   private boolean isElementPresent(By by) {
     try {
-      driver.findElement(by);
+      wd.findElement(by);
       return true;
     } catch (NoSuchElementException e) {
       return false;
@@ -50,7 +50,7 @@ public class ContactDeletionTests {
 
   private boolean isAlertPresent() {
     try {
-      driver.switchTo().alert();
+      wd.switchTo().alert();
       return true;
     } catch (NoAlertPresentException e) {
       return false;
@@ -59,7 +59,7 @@ public class ContactDeletionTests {
 
   private String closeAlertAndGetItsText() {
     try {
-      Alert alert = driver.switchTo().alert();
+      Alert alert = wd.switchTo().alert();
       String alertText = alert.getText();
       if (acceptNextAlert) {
         alert.accept();
