@@ -19,7 +19,7 @@ public class ContactDeletionTests {
   }
 
   @Test
-  public void testContactDeletionTests() throws Exception {
+  public void ContactDeletionTests() throws Exception {
     driver.get("http://localhost/addressbook/");
     driver.findElement(By.name("user")).clear();
     driver.findElement(By.name("user")).sendKeys("admin");

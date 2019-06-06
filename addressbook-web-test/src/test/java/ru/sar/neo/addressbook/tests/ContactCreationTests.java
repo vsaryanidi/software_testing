@@ -9,7 +9,7 @@ import ru.sar.neo.addressbook.model.ContactData;
 public class ContactCreationTests {
   private WebDriver wd;
 
-  @BeforeClass(alwaysRun = true)
+  @BeforeMethod(alwaysRun = true)
   public void setUp() throws Exception {
     wd = new FirefoxDriver();
     wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -26,7 +26,7 @@ public class ContactCreationTests {
   }
 
   @Test
-  public void testContactCreationTests() throws Exception {
+  public void ContactCreationTests() throws Exception {
     gotoContactAddPage();
     fillContactForm(new ContactData("Germany, Munich", "Valerie", "Saryanidi", "+7 987 333 33 33", "vsaryanidi@gmail.com"));
     submitContactCreation();
@@ -58,7 +58,7 @@ public class ContactCreationTests {
     wd.findElement(By.linkText("add new")).click();
   }
 
-  @AfterClass(alwaysRun = true)
+  @AfterMethod(alwaysRun = true)
   public void tearDown() throws Exception {
     wd.quit();
   }
