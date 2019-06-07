@@ -1,14 +1,17 @@
 package ru.sar.neo.addressbook.appmanager;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
 
+import static org.testng.Assert.assertTrue;
+
 public class ApplicationManager {
 
-  protected FirefoxDriver wd;
+  FirefoxDriver wd;
+  public boolean acceptNextAlert = true;
+
 
   private SessionHelper sessionHelper;
   private NavigationHelper navigationHelper;
@@ -26,6 +29,15 @@ public class ApplicationManager {
 
   public void stop() {
     wd.quit();
+
+  }
+
+  public GroupHelper getGroupHelper() {
+    return groupHelper;
+  }
+
+  public NavigationHelper getNavigationHelper() {
+    return navigationHelper;
   }
 
   private boolean isElementPresent(By by) {
@@ -37,12 +49,44 @@ public class ApplicationManager {
     }
   }
 
-
-  public GroupHelper getGroupHelper() {
-    return groupHelper;
+  private boolean isAlertPresent() {
+    try {
+      wd.switchTo().alert();
+      return true;
+    } catch (NoAlertPresentException e) {
+      return false;
+    }
   }
 
-  public NavigationHelper getNavigationHelper() {
-    return navigationHelper;
+  protected String closeAlertAndGetItsText() {
+    try {
+      Alert alert = wd.switchTo().alert();
+      String alertText = alert.getText();
+      if (acceptNextAlert) {
+        alert.accept();
+      } else {
+        alert.dismiss();
+      }
+      return alertText;
+    } finally {
+      acceptNextAlert = true;
+    }
+  }
+
+  public void confirmDeletionContact() {
+    assertTrue(closeAlertAndGetItsText().matches("^Delete 1 addresses[\\s\\S]$"));
+  }
+
+  public void deleteSelectedContact() {
+
+    wd.findElement(By.xpath("//input[@value='Login']")).click();
+  }
+
+  public void selectContact() {
+    wd.findElement(By.name("selected[]")).click();
+  }
+
+  public void returnToHomePage() {
+    wd.findElement(By.linkText("home")).click();
   }
 }
