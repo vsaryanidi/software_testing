@@ -5,10 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.sar.neo.addressbook.model.ContactData;
 
-import static org.testng.Assert.assertTrue;
 
 public class ContactHelper extends HelperBase{
-  public boolean acceptNextAlert = true;
 
 
   public ContactHelper(FirefoxDriver wd) {
@@ -16,27 +14,11 @@ public class ContactHelper extends HelperBase{
   }
 
 
-  public String closeAlertAndGetItsText() {
-    try {
-      Alert alert = wd.switchTo().alert();
-      String alertText = alert.getText();
-      if (acceptNextAlert) {
-        alert.accept();
-      } else {
-        alert.dismiss();
-      }
-      return alertText;
-    } finally {
-      acceptNextAlert = true;
-    }
-  }
-
   public void confirmDeletionContact() {
     wd.switchTo().alert().accept();
   }
 
   public void deleteSelectedContact() {
-    acceptNextAlert = true;
     click(By.xpath("//input[@value='Delete']"));
   }
 
@@ -44,7 +26,7 @@ public class ContactHelper extends HelperBase{
     click(By.name("selected[]"));
   }
 
-  public void returnToHomePage() {
+  public void goToHomePage() {
     click(By.linkText("home"));
   }
 
@@ -60,4 +42,11 @@ public class ContactHelper extends HelperBase{
     type(By.name("email"), contactData.getEmail());
   }
 
+  public void initContactModification() {
+    click(By.xpath("//img[@alt='Edit']"));
+  }
+
+  public void submitContactModification() {
+    click(By.name("update"));
+  }
 }
