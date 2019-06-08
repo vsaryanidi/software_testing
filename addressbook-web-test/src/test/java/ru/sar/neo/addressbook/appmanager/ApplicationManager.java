@@ -1,7 +1,11 @@
 package ru.sar.neo.addressbook.appmanager;
 
-import org.openqa.selenium.*;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import ru.sar.neo.addressbook.model.ContactData;
 
 import java.util.concurrent.TimeUnit;
 
@@ -13,9 +17,9 @@ public class ApplicationManager {
   public boolean acceptNextAlert = true;
 
 
-  private SessionHelper sessionHelper;
-  private NavigationHelper navigationHelper;
-  private GroupHelper groupHelper;
+  public SessionHelper sessionHelper;
+  public NavigationHelper navigationHelper;
+  public GroupHelper groupHelper;
 
   public void init() {
     wd = new FirefoxDriver();
@@ -40,7 +44,7 @@ public class ApplicationManager {
     return navigationHelper;
   }
 
-  private boolean isElementPresent(By by) {
+  public boolean isElementPresent(By by) {
     try {
       wd.findElement(by);
       return true;
@@ -49,7 +53,7 @@ public class ApplicationManager {
     }
   }
 
-  private boolean isAlertPresent() {
+  public boolean isAlertPresent() {
     try {
       wd.switchTo().alert();
       return true;
@@ -58,7 +62,7 @@ public class ApplicationManager {
     }
   }
 
-  protected String closeAlertAndGetItsText() {
+  public String closeAlertAndGetItsText() {
     try {
       Alert alert = wd.switchTo().alert();
       String alertText = alert.getText();
@@ -78,8 +82,8 @@ public class ApplicationManager {
   }
 
   public void deleteSelectedContact() {
-
-    wd.findElement(By.xpath("//input[@value='Login']")).click();
+    acceptNextAlert = true;
+    wd.findElement(By.xpath("//input[@value='Delete']")).click();
   }
 
   public void selectContact() {
@@ -88,5 +92,26 @@ public class ApplicationManager {
 
   public void returnToHomePage() {
     wd.findElement(By.linkText("home")).click();
+  }
+
+  public void submitContactCreation() {
+    wd.findElement(By.xpath("(//input[@name='submit'])[2]")).click();
+  }
+
+  public void fillContactForm(ContactData contactData) {
+    wd.findElement(By.name("firstname")).clear();
+    wd.findElement(By.name("firstname")).sendKeys(contactData.getFirstname());
+    wd.findElement(By.name("lastname")).clear();
+    wd.findElement(By.name("lastname")).sendKeys(contactData.getLastname());
+    wd.findElement(By.name("address")).clear();
+    wd.findElement(By.name("address")).sendKeys(contactData.getAddress());
+    wd.findElement(By.name("home")).clear();
+    wd.findElement(By.name("home")).sendKeys(contactData.getHome_phone());
+    wd.findElement(By.name("email")).clear();
+    wd.findElement(By.name("email")).sendKeys(contactData.getEmail());
+  }
+
+  public void gotoContactAddPage() {
+    wd.findElement(By.linkText("add new")).click();
   }
 }

@@ -10,10 +10,8 @@ public class ContactDeletionTests extends TestBase{
   public void ContactDeletionTests() throws Exception {
     app.returnToHomePage();
     app.selectContact();
-    app.acceptNextAlert = true;
     app.deleteSelectedContact();
     app.confirmDeletionContact();
-    app.getGroupHelper().returnToGroupPage(); /*по аналогии*/
   }
 
 }
