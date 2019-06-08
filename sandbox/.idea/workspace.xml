@@ -1111,7 +1111,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559996328147" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559996648909" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../addressbook-web-test/build.gradle" />
@@ -1142,7 +1142,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.GroupModificationTests">
+  <component name="RunManager" selected="TestNG.ContactDeletionTests">
     <configuration name="ContactDeletionTests" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-test_test" />
       <extension name="coverage">
@@ -1232,9 +1232,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ContactDeletionTests" />
         <item itemvalue="TestNG.GroupModificationTests" />
         <item itemvalue="TestNG.ru.sar.neo.addressbook.tests" />
-        <item itemvalue="TestNG.ContactDeletionTests" />
         <item itemvalue="TestNG.GroupCreationTests" />
         <item itemvalue="TestNG.GroupDeletionTests" />
       </list>
