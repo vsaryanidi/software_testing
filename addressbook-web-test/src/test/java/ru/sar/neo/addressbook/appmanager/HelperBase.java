@@ -20,12 +20,14 @@ public class HelperBase {
   public void type(By locator, String text) {
     click(locator);
 
-    if (text != null){
-    wd.findElement(locator).clear();
-    wd.findElement(locator).sendKeys(text);
+    if (text != null) {
+      String existionText = wd.findElement(locator).getAttribute("value");
+      if (! text.equals(existionText)) {
+        wd.findElement(locator).clear();
+        wd.findElement(locator).sendKeys(text);
+      }
     }
   }
-
   public boolean isAlertPresent() {
     try {
       wd.switchTo().alert();
