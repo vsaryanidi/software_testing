@@ -1,5 +1,6 @@
 package ru.sar.neo.addressbook.appmanager;
 
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -17,6 +18,7 @@ public class ContactHelper extends HelperBase{
     super(wd);
   }
 
+  public void goToHomePage(){ click(By.linkText("home"));}
 
   public void confirmDeletionContact() {
     wd.switchTo().alert().accept();
@@ -30,7 +32,9 @@ public class ContactHelper extends HelperBase{
     click(By.name("selected[]"));
   }
 
-
+  public void gotoContactAddPage() {
+    click(By.linkText("add new"));
+  }
 
   public void submitContactCreation() {
     click(By.xpath("(//input[@name='submit'])[2]"));
@@ -58,5 +62,17 @@ public class ContactHelper extends HelperBase{
 
   public void submitContactModification() {
     click(By.name("update"));
+  }
+
+  public void createContact(ContactData contact, boolean b) {
+    gotoContactAddPage();
+    fillContactForm(contact,true);
+    submitContactCreation();
+    goToHomePage();
+
+  }
+
+  public boolean isThereAContact() {
+    return isElementPresent(By.name("selected[]"));
   }
 }
