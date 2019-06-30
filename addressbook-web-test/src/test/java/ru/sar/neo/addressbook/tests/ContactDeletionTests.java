@@ -5,22 +5,25 @@ import org.testng.annotations.Test;
 import ru.sar.neo.addressbook.model.ContactData;
 import ru.sar.neo.addressbook.model.GroupData;
 
+import java.util.List;
+
 public class ContactDeletionTests extends TestBase{
 
   @Test
   public void ContactDeletionTests() throws Exception {
 
     app.getContactHelper().goToHomePage();
-    int before = app.getContactHelper().getContactCount();
     if (! app.getContactHelper().isThereAContact()){
       app.getContactHelper().createContact(new ContactData("Germany, Munich", "Valerie", "Saryanidi", "+7 987 333 33 33", "vsaryanidi@gmail.com", "TestGroup"), true);
     }
-    app.getContactHelper().selectContact(before - 1);
+    List<ContactData> before = app.getContactHelper().getContactList();
+    app.getContactHelper().selectContact(before.size() - 1);
     app.getContactHelper().deleteSelectedContact();
     app.getContactHelper().confirmDeletionContact();
     app.getContactHelper().goToHomePage();
-    int after = app.getContactHelper().getContactCount();
-    Assert.assertEquals(after, before - 1);
+    List<ContactData> after = app.getContactHelper().getContactList();
+    Assert.assertEquals(after.size(), before.size() - 1);
+
   }
 
 }
