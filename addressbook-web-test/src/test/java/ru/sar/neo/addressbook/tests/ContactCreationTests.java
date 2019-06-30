@@ -13,10 +13,13 @@ public class ContactCreationTests extends TestBase{
     app.getContactHelper().goToHomePage();
     List<ContactData> before = app.getContactHelper().getContactList();
     app.getContactHelper().gotoContactAddPage();
-    app.getContactHelper().fillContactForm(new ContactData("Germany, Munich", "Valerie", "Saryanidi", "+7 987 333 33 33", "vsaryanidi@gmail.com", "TestGroup"), true);
+    ContactData contact = new ContactData("Germany, Munich", "Valerie", "Saryanidi", "+7 987 333 33 33", "vsaryanidi@gmail.com", "TestGroup");
+    app.getContactHelper().fillContactForm(contact,true);
     app.getContactHelper().submitContactCreation();
     app.getContactHelper().goToHomePage();
     List<ContactData> after = app.getContactHelper().getContactList();
     Assert.assertEquals(after.size(), before.size() + 1);
+
+    before.add(contact);
   }
 }
