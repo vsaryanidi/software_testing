@@ -88,7 +88,8 @@ public class ContactHelper extends HelperBase{
 
     for (WebElement element: elements) {
       String name = element.getText();
-      ContactData contact = new ContactData(null, name,null,null,null,null);
+      String id = element.findElement(By.tagName("table")).getAttribute("maintable");
+      ContactData contact = new ContactData(id, null, name,null,null,null,null);
       contacts.add(contact);
 
       System.out.println(name);

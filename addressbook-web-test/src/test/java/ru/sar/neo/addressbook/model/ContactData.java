@@ -1,6 +1,7 @@
 package ru.sar.neo.addressbook.model;
 
 public class ContactData {
+  private final String id;
   private final String address;
   private final String firstname;
   private final String lastname;
@@ -9,6 +10,7 @@ public class ContactData {
   private String group;
 
   public ContactData(String address, String firstname, String lastname, String home_phone, String email, String group) {
+    this.id = null;
     this.address = address;
     this.firstname = firstname;
     this.lastname = lastname;
@@ -17,6 +19,19 @@ public class ContactData {
     this.group = group;
   }
 
+  public ContactData(String id, String address, String firstname, String lastname, String home_phone, String email, String group) {
+    this.id = id;
+    this.address = address;
+    this.firstname = firstname;
+    this.lastname = lastname;
+    this.home_phone = home_phone;
+    this.email = email;
+    this.group = group;
+  }
+
+  public String getId() {
+    return id;
+  }
   public String getAddress() {
     return address;
   }
