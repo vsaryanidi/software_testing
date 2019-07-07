@@ -4,36 +4,48 @@ import java.util.Objects;
 
 public class ContactData {
 
-  private int id;
-  private final String address;
-  private final String firstname;
-  private final String lastname;
-  private final String home_phone;
-  private final String email;
+  private int id = Integer.MAX_VALUE;;
+  private String address;
+  private String firstname;
+  private String lastname;
+  private String home_phone;
+  private String email;
   private String group;
 
-   public ContactData(String address, String firstname, String lastname, String home_phone, String email, String group) {
-    this.id = Integer.MAX_VALUE;
-    this.address = address;
-    this.firstname = firstname;
-    this.lastname = lastname;
-    this.home_phone = home_phone;
-    this.email = email;
-    this.group = group;
+
+  public ContactData withId(int id) {
+    this.id = id;
+    return this;
   }
 
-  public ContactData(int id, String address, String firstname, String lastname, String home_phone, String email, String group) {
-    this.id = id;
+  public ContactData withAddress(String address) {
     this.address = address;
-    this.firstname = firstname;
-    this.lastname = lastname;
-    this.home_phone = home_phone;
-    this.email = email;
-    this.group = group;
+    return this;
   }
 
-  public void setId(int id) {
-    this.id = id;
+  public ContactData withFirstname(String firstname) {
+    this.firstname = firstname;
+    return this;
+  }
+
+  public ContactData withLastname(String lastname) {
+    this.lastname = lastname;
+    return this;
+  }
+
+  public ContactData withHome_phone(String home_phone) {
+    this.home_phone = home_phone;
+    return this;
+  }
+
+  public ContactData withEmail(String email) {
+    this.email = email;
+    return this;
+  }
+
+  public ContactData withGroup(String group) {
+    this.group = group;
+    return this;
   }
   public int getId() {
     return id;
@@ -84,6 +96,5 @@ public class ContactData {
             ", lastname='" + lastname + '\'' +
             '}';
   }
-
 
 }

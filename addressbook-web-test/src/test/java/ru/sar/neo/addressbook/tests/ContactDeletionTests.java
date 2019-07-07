@@ -13,7 +13,13 @@ public class ContactDeletionTests extends TestBase{
   public void ensurePreconditions(){
     app.contact().goToHomePage();
     if (app.contact().list().size() == 0){
-      app.contact().create(new ContactData("Germany, Munich", "Valerie", "Saryanidi", "+7 987 333 33 33", "vsaryanidi@gmail.com", "TestGroup"), true);
+      app.contact().create(new ContactData().
+              withFirstname("Valerie").
+              withLastname("Saryanidi").
+              withAddress("Germany, Munich").
+              withHome_phone("+7 987 333 33 33").
+              withEmail("vsaryanidi@gmail.com").
+              withGroup("TestGroup"),true);
     }
   }
 
