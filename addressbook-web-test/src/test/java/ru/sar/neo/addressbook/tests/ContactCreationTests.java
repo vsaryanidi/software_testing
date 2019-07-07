@@ -3,7 +3,6 @@ package ru.sar.neo.addressbook.tests;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import ru.sar.neo.addressbook.model.ContactData;
-import ru.sar.neo.addressbook.model.GroupData;
 
 import java.util.Comparator;
 import java.util.List;
@@ -12,14 +11,14 @@ public class ContactCreationTests extends TestBase{
 
   @Test
   public void ContactCreationTests() throws Exception {
-    app.getContactHelper().goToHomePage();
-    List<ContactData> before = app.getContactHelper().getContactList();
-    app.getContactHelper().gotoContactAddPage();
+    app.contact().goToHomePage();
+    List<ContactData> before = app.contact().list();
+    app.contact().gotoContactAddPage();
     ContactData contact = new ContactData("Germany, Munich", "Valerie", "Saryanidi", "+7 987 333 33 33", "vsaryanidi@gmail.com", "TestGroup");
-    app.getContactHelper().fillContactForm(contact,true);
-    app.getContactHelper().submitContactCreation();
-    app.getContactHelper().goToHomePage();
-    List<ContactData> after = app.getContactHelper().getContactList();
+    app.contact().fillContactForm(contact,true);
+    app.contact().submitContactCreation();
+    app.contact().goToHomePage();
+    List<ContactData> after = app.contact().list();
     Assert.assertEquals(after.size(), before.size() + 1);
 
 
