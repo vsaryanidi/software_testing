@@ -15,7 +15,7 @@ public class GroupCreationTests extends TestBase {
     Groups before = app.group().all();
     GroupData group = new GroupData().withName("TestGroup");
     app.group().create(group);
-    Groups after = (Groups) app.group().all();
+    Groups after = app.group().all();
     assertThat(after.size(), equalTo(before.size() + 1));
 
     assertThat(after, equalTo(

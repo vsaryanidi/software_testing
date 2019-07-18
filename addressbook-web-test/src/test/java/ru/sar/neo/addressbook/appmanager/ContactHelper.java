@@ -1,17 +1,16 @@
-package ru.sar.neo.addressbook.appmanager;
+ package ru.sar.neo.addressbook.appmanager;
 
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
-import ru.sar.neo.addressbook.model.ContactData;
-import ru.sar.neo.addressbook.model.Contacts;
+ import org.openqa.selenium.By;
+ import org.openqa.selenium.WebDriver;
+ import org.openqa.selenium.WebElement;
+ import org.openqa.selenium.support.ui.Select;
+ import org.testng.Assert;
+ import ru.sar.neo.addressbook.model.ContactData;
+ import ru.sar.neo.addressbook.model.Contacts;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+ import java.util.ArrayList;
+ import java.util.List;
 
 
 public class ContactHelper extends HelperBase{
@@ -20,6 +19,7 @@ public class ContactHelper extends HelperBase{
   public ContactHelper(WebDriver wd) {
     super(wd);
   }
+  private boolean acceptNextAlert = true;
 
   public void goToHomePage(){ click(By.linkText("home"));}
 
@@ -67,11 +67,13 @@ public class ContactHelper extends HelperBase{
   public void submitContactModification() {
     click(By.name("update"));
   }
+  private Contacts contactCache = null;
 
   public void create(ContactData contact, boolean b) {
     gotoContactAddPage();
     fillContactForm(contact,true);
     submitContactCreation();
+    contactCache = null;
     goToHomePage();
 
   }
@@ -79,6 +81,7 @@ public class ContactHelper extends HelperBase{
     initContactModificationById(contact.getId());
     fillContactForm(contact,false);
     submitContactModification();
+    contactCache = null;
     goToHomePage();
   }
 
@@ -86,6 +89,7 @@ public class ContactHelper extends HelperBase{
     selectContactById(contact.getId());
     deleteSelectedContact();
     confirmDeletionContact();
+    contactCache = null;
     goToHomePage();
   }
 
@@ -97,9 +101,13 @@ public class ContactHelper extends HelperBase{
     return wd.findElements(By.name("selected[]")).size();
   }
 
-
   public Contacts all() {
-    Contacts contacts = new Contacts();
+
+    if (contactCache != null) {
+      return new Contacts(contactCache);
+    }
+
+    Contacts contactCache = new Contacts();
     List<WebElement> elements = wd.findElements(By.xpath("//tr[@name='entry']"));
 
     for (WebElement element: elements) {
@@ -107,9 +115,9 @@ public class ContactHelper extends HelperBase{
       int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
       String firstname = element.findElement(By.xpath(".//td[3]")).getText();
       String lastname = element.findElement(By.xpath(".//td[2]")).getText();
-      contacts.add(new ContactData().withFirstname(firstname).withLastname(lastname).withId(id));
+      contactCache.add(new ContactData().withFirstname(firstname).withLastname(lastname).withId(id));
     }
-    return contacts;
+    return new Contacts(contactCache);
   }
 
 }
