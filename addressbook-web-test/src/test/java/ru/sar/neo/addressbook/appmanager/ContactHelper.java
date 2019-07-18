@@ -9,7 +9,6 @@
  import ru.sar.neo.addressbook.model.ContactData;
  import ru.sar.neo.addressbook.model.Contacts;
 
- import java.util.ArrayList;
  import java.util.List;
 
 
@@ -120,4 +119,7 @@ public class ContactHelper extends HelperBase{
     return new Contacts(contactCache);
   }
 
+  public ContactData infoFromEditForm(ContactData contact) {
+    return contact;
+  }
 }
