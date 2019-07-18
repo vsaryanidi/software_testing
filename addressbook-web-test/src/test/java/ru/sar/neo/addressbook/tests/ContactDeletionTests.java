@@ -1,13 +1,20 @@
 package ru.sar.neo.addressbook.tests;
 
+import org.hamcrest.CoreMatchers;
+import org.hamcrest.MatcherAssert;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.sar.neo.addressbook.model.ContactData;
+import ru.sar.neo.addressbook.model.Contacts;
 import ru.sar.neo.addressbook.model.GroupData;
 
 import java.util.List;
 import java.util.Set;
+
+import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.MatcherAssert.*;
+import static org.testng.Assert.*;
 
 public class ContactDeletionTests extends TestBase{
 
@@ -28,14 +35,12 @@ public class ContactDeletionTests extends TestBase{
   @Test
   public void ContactDeletionTests() throws Exception {
 
-    Set<ContactData> before = app.contact().all();
+    Contacts before = app.contact().all();
     ContactData deletedContact = before.iterator().next();
     app.contact().delete(deletedContact);
-    Set<ContactData> after = app.contact().all();
-    Assert.assertEquals(after.size(), before.size() - 1);
-
-    before.remove(deletedContact);
-    Assert.assertEquals(before,after);
+    Contacts after = app.contact().all();
+    assertEquals(after.size(), before.size() - 1);
+    assertThat(after, equalTo(before.without(deletedContact)));
 
   }
 

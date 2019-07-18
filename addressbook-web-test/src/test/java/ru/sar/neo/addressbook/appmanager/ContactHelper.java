@@ -7,8 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import ru.sar.neo.addressbook.model.ContactData;
+import ru.sar.neo.addressbook.model.Contacts;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -97,22 +97,9 @@ public class ContactHelper extends HelperBase{
     return wd.findElements(By.name("selected[]")).size();
   }
 
-  public List<ContactData> list() {
-    List<ContactData> contacts = new ArrayList<ContactData>();
-    List<WebElement> elements = wd.findElements(By.xpath("//tr[@name='entry']"));
 
-    for (WebElement element: elements) {
-
-      int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
-      String firstname = element.findElement(By.xpath(".//td[3]")).getText();
-      String lastname = element.findElement(By.xpath(".//td[2]")).getText();
-      contacts.add(new ContactData().withFirstname(firstname).withLastname(lastname).withId(id));
-    }
-    return contacts;
-  }
-
-  public Set<ContactData> all() {
-    Set<ContactData> contacts = new HashSet<ContactData>();
+  public Contacts all() {
+    Contacts contacts = new Contacts();
     List<WebElement> elements = wd.findElements(By.xpath("//tr[@name='entry']"));
 
     for (WebElement element: elements) {
