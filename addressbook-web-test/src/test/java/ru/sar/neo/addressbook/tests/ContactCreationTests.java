@@ -11,7 +11,7 @@ import java.util.Set;
 public class ContactCreationTests extends TestBase{
 
   @Test
-  public void ContactCreationTests() throws Exception {
+  public void ContactCreationTests()  {
     app.contact().goToHomePage();
     Set<ContactData> before = app.contact().all();
     app.contact().gotoContactAddPage();

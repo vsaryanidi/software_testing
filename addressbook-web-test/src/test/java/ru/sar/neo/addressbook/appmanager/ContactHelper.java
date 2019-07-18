@@ -32,7 +32,7 @@ public class ContactHelper extends HelperBase{
   }
 
   private void selectContactById(int id) {
-    wd.findElement(By.cssSelector("input[value = '" + id + "']")).click();
+    wd.findElement(By.cssSelector("input[value='" + id + "']")).click();
   }
 
 
@@ -60,8 +60,8 @@ public class ContactHelper extends HelperBase{
 
   }
 
-  private void initContactModificationById(int id) {
-    wd.findElement(By.cssSelector("a[href='edit.php?id="+ id +"']")).click();
+  public void initContactModificationById(int id) {
+    wd.findElement(By.xpath(".//a[@href='edit.php?id=" + id + "']")).click();
   }
 
   public void submitContactModification() {
