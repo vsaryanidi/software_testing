@@ -18,11 +18,24 @@ public class ContactCreationTests extends TestBase{
     app.contact().fillContactForm(contact,true);
     app.contact().submitContactCreation();
     app.contact().goToHomePage();
+    assertThat(app.contact().count(), equalTo(before.size() + 1));
     Contacts after = app.contact().all();
-
-    assertThat(after.size(), equalTo(before.size() + 1));
-
     assertThat(after, equalTo(
             before.withAdded(contact.withId(after.stream().mapToInt((c) -> c.getId()).max().getAsInt()))));
+  }
+
+  @Test
+  public void testBadContactCreation()  {
+    app.contact().goToHomePage();
+    Contacts before = app.contact().all();
+    app.contact().gotoContactAddPage();
+    ContactData contact = new ContactData().withFirstname("Valerie'").withLastname("Saryanidi").withAddress("Germany, Munich").withHome_phone("+7 987 333 33 33").withEmail("vsaryanidi@gmail.com").withGroup("TestGroup");
+    app.contact().fillContactForm(contact,true);
+    app.contact().submitContactCreation();
+    app.contact().goToHomePage();
+
+    assertThat(app.contact().count(), equalTo(before.size()));
+    Contacts after = app.contact().all();
+    assertThat(after, equalTo(before));
   }
 }
