@@ -1,5 +1,6 @@
 package ru.sar.neo.addressbook.model;
 
+import java.io.File;
 import java.util.Objects;
 
 public class ContactData {
@@ -17,6 +18,13 @@ public class ContactData {
   private String group;
   private String allPhones;
   private String allMails;
+  private File photo;
+
+
+  public ContactData withPhoto(File photo) {
+    this.photo = photo;
+    return this;
+  }
 
  public ContactData withAllPhones(String allPhones) {
     this.allPhones = allPhones;
@@ -85,6 +93,10 @@ public class ContactData {
     return this;
   }
 
+
+  public File getPhoto() {
+    return photo;
+  }
 
   public String getAllMails() {
     return allMails;
