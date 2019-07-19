@@ -12,9 +12,11 @@ public class ContactData {
   private String mobile_phone;
   private String work_phone;
   private String email;
+  private String email1;
+  private String email2;
   private String group;
   private String allPhones;
-
+  private String allMails;
 
  public ContactData withAllPhones(String allPhones) {
     this.allPhones = allPhones;
@@ -61,12 +63,32 @@ public class ContactData {
     return this;
   }
 
+
+  public ContactData withEmail1(String email1) {
+    this.email1 = email1;
+    return this;
+  }
+
+  public ContactData withEmail2(String email2) {
+    this.email2 = email2;
+    return this;
+  }
+
+
+  public ContactData withAllMails(String allMails) {
+    this.allMails = allMails;
+    return this;
+  }
+
   public ContactData withGroup(String group) {
     this.group = group;
     return this;
   }
 
 
+  public String getAllMails() {
+    return allMails;
+  }
 
   public String getAllPhones() {
     return allPhones;
@@ -102,6 +124,14 @@ public class ContactData {
 
   public String getEmail() {
     return email;
+  }
+
+  public String getEmail1() {
+    return email1;
+  }
+
+  public String getEmail2() {
+    return email2;
   }
 
   public String getGroup() {
