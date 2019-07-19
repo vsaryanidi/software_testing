@@ -105,13 +105,13 @@
         <counts>
           <entry key="dummy" value="198" />
           <entry key="gradle" value="127" />
-          <entry key="java" value="12208" />
+          <entry key="java" value="12229" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="127" />
-          <entry key="JAVA" value="12208" />
+          <entry key="JAVA" value="12229" />
           <entry key="PLAIN_TEXT" value="198" />
         </counts>
       </usages-collector>
@@ -125,8 +125,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/appmanager/ContactHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="135" column="2" selection-start-line="135" selection-start-column="2" selection-end-line="135" selection-end-column="2" />
+            <state relative-caret-position="189">
+              <caret line="129" column="74" selection-start-line="129" selection-start-column="74" selection-end-line="129" selection-end-column="74" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1787#1788#0" expanded="true" />
@@ -143,10 +143,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/tests/ContactPhoneTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="257">
+              <caret line="19" column="96" selection-start-line="19" selection-start-column="96" selection-end-line="19" selection-end-column="96" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#824#825#0" expanded="true" />
+                <element signature="e#893#894#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1124,7 +1126,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563538668443" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563539195380" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../addressbook-web-test/build.gradle" />
@@ -1273,15 +1275,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ContactCreationTests - 2019.07.19 at 15h 38m 30s.xml">
-      <configuration name="ContactCreationTests" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ContactPhoneTests - 2019.07.19 at 15h 47m 13s.xml">
-      <configuration name="ContactPhoneTests" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ContactCreationTests_testContactCreation - 2019.07.19 at 15h 50m 49s.xml">
-      <configuration name="ContactCreationTests.testContactCreation" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="ContactPhoneTests - 2019.07.19 at 15h 52m 14s.xml">
       <configuration name="ContactPhoneTests" configurationId="TestNG" />
     </history-entry>
@@ -1301,6 +1294,15 @@
       <configuration name="ContactPhoneTests" configurationId="TestNG" />
     </history-entry>
     <history-entry file="ContactPhoneTests_testContactPhones - 2019.07.19 at 16h 14m 31s.xml">
+      <configuration name="ContactPhoneTests.testContactPhones" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ContactPhoneTests_testContactPhones - 2019.07.19 at 16h 17m 04s.xml">
+      <configuration name="ContactPhoneTests.testContactPhones" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ContactPhoneTests_testContactPhones - 2019.07.19 at 16h 17m 58s.xml">
+      <configuration name="ContactPhoneTests.testContactPhones" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ContactPhoneTests_testContactPhones - 2019.07.19 at 16h 25m 56s.xml">
       <configuration name="ContactPhoneTests.testContactPhones" configurationId="TestNG" />
     </history-entry>
   </component>
@@ -1819,8 +1821,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/appmanager/ContactHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="135" column="2" selection-start-line="135" selection-start-column="2" selection-end-line="135" selection-end-column="2" />
+        <state relative-caret-position="189">
+          <caret line="129" column="74" selection-start-line="129" selection-start-column="74" selection-end-line="129" selection-end-column="74" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1787#1788#0" expanded="true" />
@@ -1835,10 +1837,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/tests/ContactPhoneTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="257">
+          <caret line="19" column="96" selection-start-line="19" selection-start-column="96" selection-end-line="19" selection-end-column="96" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#824#825#0" expanded="true" />
+            <element signature="e#893#894#0" expanded="true" />
           </folding>
         </state>
       </provider>
