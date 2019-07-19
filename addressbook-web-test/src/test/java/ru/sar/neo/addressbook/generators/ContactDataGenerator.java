@@ -1,7 +1,9 @@
 package ru.sar.neo.addressbook.generators;
 
 import ru.sar.neo.addressbook.model.ContactData;
-import ru.sar.neo.addressbook.model.GroupData;
+import com.beust.jcommander.JCommander;
+import com.beust.jcommander.Parameter;
+import com.beust.jcommander.ParameterException;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -12,16 +14,30 @@ import java.util.List;
 
 public class ContactDataGenerator {
 
-    public static void main(String[] args) throws IOException{
-      int count = Integer.parseInt(args[0]);
-      File file = new File(args[1]);
+  @Parameter(names = "-c", description = "ContactCount")
+  public int count;
 
-      List<ContactData> contacts = generateContacts(count);
-      save(contacts, file);
+  @Parameter (names = "-f", description = "Target file")
+  public String file;
 
+  public static void main(String[] args) throws IOException{
+    ContactDataGenerator generator = new ContactDataGenerator();
+    JCommander jCommander = new JCommander(generator);
+    try {
+      jCommander.parse(args);
+    } catch (ParameterException ex) {
+      jCommander.usage();
+      return;
     }
+    generator.run();
 
-    private static void save(List<ContactData> contacts, File file) throws IOException {
+  }
+  private void run() throws IOException {
+    List<ContactData> contacts = generateContacts(count);
+    save(contacts, new File(file));
+  }
+
+    private void save(List<ContactData> contacts, File file) throws IOException {
       Writer writer = new FileWriter(file);
       for (ContactData contact : contacts){
         writer.write(String.format("%s;%s;%s;%s;%s;%s;%s;%s;%s;%s\n", contact.getFirstname(), contact.getLastname(),
@@ -31,7 +47,7 @@ public class ContactDataGenerator {
       writer.close();
     }
 
-    private static List<ContactData> generateContacts (int count) {
+    private List<ContactData> generateContacts (int count) {
       List<ContactData> contacts = new ArrayList<ContactData>();
       for (int i = 0; i < count; i++) {
         contacts.add(new ContactData()
