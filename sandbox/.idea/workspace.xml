@@ -87,9 +87,9 @@
           <entry key="csv" value="11" />
           <entry key="gradle" value="16" />
           <entry key="gradlew" value="1" />
-          <entry key="java" value="452" />
+          <entry key="java" value="454" />
           <entry key="jpg" value="1" />
-          <entry key="properties" value="1" />
+          <entry key="properties" value="2" />
           <entry key="xml" value="7" />
         </counts>
       </usages-collector>
@@ -98,9 +98,9 @@
           <entry key="CLASS" value="1" />
           <entry key="Groovy" value="16" />
           <entry key="Image" value="1" />
-          <entry key="JAVA" value="452" />
+          <entry key="JAVA" value="454" />
           <entry key="PLAIN_TEXT" value="14" />
-          <entry key="Properties" value="1" />
+          <entry key="Properties" value="2" />
           <entry key="XML" value="7" />
         </counts>
       </usages-collector>
@@ -108,14 +108,14 @@
         <counts>
           <entry key="dummy" value="198" />
           <entry key="gradle" value="156" />
-          <entry key="java" value="15219" />
+          <entry key="java" value="15224" />
           <entry key="xml" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="156" />
-          <entry key="JAVA" value="15219" />
+          <entry key="JAVA" value="15224" />
           <entry key="PLAIN_TEXT" value="198" />
           <entry key="XML" value="20" />
         </counts>
@@ -127,20 +127,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/tests/ContactCreationTests.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../addressbook-web-test/src/test/resources/local.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+            <state>
+              <caret column="42" selection-start-column="42" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../addressbook-web-test/build.gradle">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/tests/ContactCreationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
+            <state relative-caret-position="425">
+              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -148,21 +151,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/appmanager/ApplicationManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
-              <folding>
-                <element signature="e#679#680#0" expanded="true" />
-                <element signature="e#711#712#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../addressbook-web-test/src/test/resources/local.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+            <state relative-caret-position="255">
+              <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
             </state>
           </provider>
         </entry>
@@ -569,9 +559,9 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$/../addressbook-web-test" value="4681149304009" />
+        <entry key="$PROJECT_DIR$/../addressbook-web-test" value="4681152061488" />
         <entry key="$PROJECT_DIR$/../addressbook-web-test/.gradle" value="0" />
-        <entry key="$PROJECT_DIR$/../addressbook-web-test/build.gradle" value="3457927666" />
+        <entry key="$PROJECT_DIR$/../addressbook-web-test/build.gradle" value="2836937527" />
         <entry key="$PROJECT_DIR$/../addressbook-web-test/gradle/wrapper/gradle-wrapper.properties" value="2889983086" />
         <entry key="$PROJECT_DIR$" value="4675689311750" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
@@ -991,7 +981,6 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/sar/neo/Collections.java" />
         <option value="$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/tests/TestBase.java" />
         <option value="$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/appmanager/NavigationHelper.java" />
-        <option value="$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/appmanager/ApplicationManager.java" />
         <option value="$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/model/Groups.java" />
         <option value="$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/model/Contacts.java" />
         <option value="$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/appmanager/GroupHelper.java" />
@@ -1014,8 +1003,9 @@
         <option value="$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/tests/ContactInfoTests.java" />
         <option value="$PROJECT_DIR$/../addressbook-web-test/src/test/resources/testng_contacts.xml" />
         <option value="$PROJECT_DIR$/../addressbook-web-test/src/test/resources/testng_groups.xml" />
-        <option value="$PROJECT_DIR$/../addressbook-web-test/src/test/resources/local.properties" />
         <option value="$PROJECT_DIR$/../addressbook-web-test/build.gradle" />
+        <option value="$PROJECT_DIR$/../addressbook-web-test/src/test/resources/local.properties" />
+        <option value="$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/appmanager/ApplicationManager.java" />
       </list>
     </option>
   </component>
@@ -1142,7 +1132,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563640095563" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563642766928" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../addressbook-web-test" />
@@ -1179,7 +1169,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.ContactCreationTests">
+  <component name="RunManager" selected="TestNG.ContactCreationTests.testBadContactCreation">
     <configuration name="addressbook-web-test [testContacts]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -1242,7 +1232,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContactInfoTests.testContactInfo" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ContactCreationTests.testBadContactCreation" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-test_test" />
       <extension name="coverage">
         <pattern>
@@ -1251,8 +1241,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.sar.neo.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="ru.sar.neo.addressbook.tests.ContactInfoTests" />
-      <option name="METHOD_NAME" value="testContactInfo" />
+      <option name="MAIN_CLASS_NAME" value="ru.sar.neo.addressbook.tests.ContactCreationTests" />
+      <option name="METHOD_NAME" value="testBadContactCreation" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -1261,19 +1251,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="TestNG.ContactInfoTests.testContactInfo" />
       <item itemvalue="Gradle.addressbook-web-test [testContacts]" />
       <item itemvalue="Gradle.addressbook-web-test [testGroups]" />
       <item itemvalue="TestNG.C:/Users/user/Documents/GitHub/software_testing/addressbook-web-test/src/test/resources/testng_contacts.xml" />
       <item itemvalue="TestNG.ContactCreationTests" />
+      <item itemvalue="TestNG.ContactCreationTests.testBadContactCreation" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ContactCreationTests.testBadContactCreation" />
         <item itemvalue="TestNG.ContactCreationTests" />
         <item itemvalue="Gradle.addressbook-web-test [testContacts]" />
         <item itemvalue="TestNG.C:/Users/user/Documents/GitHub/software_testing/addressbook-web-test/src/test/resources/testng_contacts.xml" />
         <item itemvalue="Gradle.addressbook-web-test [testGroups]" />
-        <item itemvalue="TestNG.ContactInfoTests.testContactInfo" />
       </list>
     </recent_temporary>
   </component>
@@ -1291,9 +1281,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ContactInfoTests_testContactInfo - 2019.07.20 at 17h 57m 35s.xml">
-      <configuration name="ContactInfoTests.testContactInfo" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="ContactInfoTests - 2019.07.20 at 18h 01m 30s.xml">
       <configuration name="ContactInfoTests" configurationId="TestNG" />
     </history-entry>
@@ -1320,6 +1307,9 @@
     </history-entry>
     <history-entry file="ContactCreationTests - 2019.07.20 at 20h 23m 55s.xml">
       <configuration name="ContactCreationTests" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ContactCreationTests_testBadContactCreation - 2019.07.20 at 21h 12m 22s.xml">
+      <configuration name="ContactCreationTests.testBadContactCreation" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -1571,9 +1561,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="34" column="4" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1733,8 +1720,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/appmanager/HelperBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="-153">
+          <caret column="42" lean-forward="true" selection-start-column="42" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#424#425#0" expanded="true" />
@@ -1743,49 +1730,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/appmanager/SessionHelper.java">
+    <entry file="file://$PROJECT_DIR$/../addressbook-web-test/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" column="47" lean-forward="true" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+        <state relative-caret-position="298">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/tests/TestBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <caret line="17" column="40" lean-forward="true" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/appmanager/SessionHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+          <folding>
+            <element signature="e#249#250#0" expanded="true" />
+            <element signature="e#268#269#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../addressbook-web-test/src/test/resources/local.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../addressbook-web-test/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
+        <state>
+          <caret column="42" selection-start-column="42" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/appmanager/ApplicationManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
-          <folding>
-            <element signature="e#679#680#0" expanded="true" />
-            <element signature="e#711#712#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/tests/ContactCreationTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        <state relative-caret-position="425">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
