@@ -10,28 +10,29 @@ dependencies        {
     compile 'org.hamcrest:java-hamcrest:2.0.0.0'
     compile 'com.beust:jcommander:1.72'
     compile 'com.thoughtworks.xstream:xstream:1.4.11.1'
+    compile 'ch.qos.logback:logback-classic:1.2.3'
 }
 
 task testContacts (type: Test) {
     useTestNG {
         suites 'src/test/resources/testng_contacts.xml'
     }
-  /*  if (project.hasProperty('browser')) {
+  if (project.hasProperty('browser')) {
         systemProperty 'browser', "${browser}"
     }
     if (project.hasProperty('target')) {
         systemProperty 'target', "${target}"
-    }*/
+    }
 }
 
 task testGroups (type: Test) {
     useTestNG {
         suites 'src/test/resources/testng_groups.xml'
     }
-   /* if (project.hasProperty('browser')) {
+   if (project.hasProperty('browser')) {
         systemProperty 'browser', "${browser}"
     }
     if (project.hasProperty('target')) {
         systemProperty 'target', "${target}"
-    }*/
+    }
 }
