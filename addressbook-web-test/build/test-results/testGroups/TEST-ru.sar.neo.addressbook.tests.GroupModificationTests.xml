@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.sar.neo.addressbook.tests.GroupModificationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-07-20T14:37:18" hostname="MM-OZZV-4" time="3.549">
+  <properties/>
+  <testcase name="testGroupModification" classname="ru.sar.neo.addressbook.tests.GroupModificationTests" time="3.549"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
