@@ -1,10 +1,14 @@
 package ru.sar.neo.addressbook.model;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamOmitField;
+
 import java.io.File;
 import java.util.Objects;
 
+@XStreamAlias("contact")
 public class ContactData {
-
+@XStreamOmitField
   private int id = Integer.MAX_VALUE;;
   private String address;
   private String firstname;
