@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import ru.sar.neo.addressbook.model.ContactData;
 import ru.sar.neo.addressbook.model.Contacts;
 import ru.sar.neo.addressbook.model.GroupData;
+import ru.sar.neo.addressbook.model.Groups;
 
 import java.util.List;
 import java.util.Set;
@@ -21,15 +22,15 @@ public class ContactDeletionTests extends TestBase{
   @BeforeMethod
   public void ensurePreconditions(){
       if (app.db().contacts().size() == 0){
-
+      Groups groups = app.db().groups();
       app.contact().goToHomePage();
       app.contact().create(new ContactData().
               withFirstname("Valerie").
               withLastname("Saryanidi").
               withAddress("Germany, Munich").
               withHome_phone("+7 987 333 33 33").
-              withEmail("vsaryanidi@gmail.com").
-              withGroup("TestGroup"),true);
+              withEmail("vsaryanidi@gmail.com")
+              .inGroup(groups.iterator().next()),true);
     }
   }
 

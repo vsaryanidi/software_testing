@@ -2,6 +2,7 @@ package ru.sar.neo.addressbook.tests;
 
 import org.testng.annotations.*;
 import ru.sar.neo.addressbook.model.ContactData;
+import ru.sar.neo.addressbook.model.Groups;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;
@@ -17,11 +18,12 @@ public class ContactInfoTests extends TestBase{
 
     app.contact().goToHomePage();
     if (app.contact().all().size() == 0){
+      Groups groups = app.db().groups();
       app.contact().create(new ContactData().withFirstname("Valerie")
               .withLastname("Saryanidi").withAddress("Germany, Munich")
               .withHome_phone("+7 987 333 33 33").withMobile_phone("+7(987)333333").withWork_phone("22-55-88")
               .withEmail("vsaryanidi@gmail.com").withEmail1("vsaryanidi1@gmail.com").withEmail2("vsaryanidi2@gmail.com")
-              .withGroup("TestGroup"),true);
+              .inGroup(groups.iterator().next()),true);
     }
   }
   
