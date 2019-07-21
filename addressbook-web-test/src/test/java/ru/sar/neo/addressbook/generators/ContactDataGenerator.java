@@ -60,7 +60,7 @@ public class ContactDataGenerator {
   private void saveAsCsv(List<ContactData> contacts, File file) throws IOException {
     try(Writer writer = new FileWriter(file)) {
       for (ContactData contact : contacts) {
-        writer.write(String.format("%s;%s;%s;%s;%s;%s;%s;%s;%s;%s\n", contact.getFirstname(), contact.getLastname(),
+        writer.write(String.format("%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s\n", contact.getFirstname(), contact.getLastname(),
                 contact.getHome_phone(), contact.getMobile_phone(), contact.getWork_phone(), contact.getAddress(),
                 contact.getEmail(), contact.getEmail1(), contact.getEmail2(), contact.getPhoto(), contact.getGroup()));
       }

@@ -40,13 +40,13 @@ public class ContactCreationTests extends TestBase {
 
   public void testContactCreation(ContactData contact) throws Exception {
     app.contact().goToHomePage();
-    Contacts before = app.contact().all();
+    Contacts before = app.db().contacts();
     app.contact().gotoContactAddPage();
     app.contact().fillContactForm(contact,true);
     app.contact().submitContactCreation();
     app.contact().goToHomePage();
+    Contacts after = app.db().contacts();
     assertThat(app.contact().count(), equalTo(before.size() + 1));
-    Contacts after = app.contact().all();
     assertThat(after, equalTo(
             before.withAdded(contact.withId(after.stream().mapToInt((c) -> c.getId()).max().getAsInt()))));
   }
@@ -55,15 +55,26 @@ public class ContactCreationTests extends TestBase {
   @Test
   public void testBadContactCreation()  {
     app.contact().goToHomePage();
-    Contacts before = app.contact().all();
+    Contacts before = app.db().contacts();
     app.contact().gotoContactAddPage();
-    ContactData contact = new ContactData().withFirstname("Valerie'").withLastname("Saryanidi").withAddress("Germany, Munich").withHome_phone("+7 987 333 33 33").withEmail("vsaryanidi@gmail.com").withGroup("TestGroup");
+    ContactData contact = new ContactData()
+            .withFirstname("Valerie'")
+            .withLastname("Saryanidi")
+            .withHome_phone("+7 987 333 33 33")
+            .withMobile_phone("22222")
+            .withWork_phone("3333")
+            .withAddress("Germany, Munich")
+            .withEmail("vsaryanidi@gmail.com")
+            .withEmail1("5454@hff.gh")
+            .withEmail2("ghghgh@jfjf.ru")
+            .withPhoto(new File("src/test/resources/contacts.xml"))
+            .withGroup("Group 0");
     app.contact().fillContactForm(contact,true);
     app.contact().submitContactCreation();
     app.contact().goToHomePage();
-
+    Contacts after = app.db().contacts();
     assertThat(app.contact().count(), equalTo(before.size()));
-    Contacts after = app.contact().all();
     assertThat(after, equalTo(before));
   }
+
 }

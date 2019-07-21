@@ -9,6 +9,7 @@ import ru.sar.neo.addressbook.model.ContactData;
 import ru.sar.neo.addressbook.model.Contacts;
 import ru.sar.neo.addressbook.model.GroupData;
 
+import java.io.File;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
@@ -23,25 +24,44 @@ public class ContactModificationTests extends TestBase{
 
   public void ensurePreconditions(){
 
-    app.contact().goToHomePage();
-    if (app.contact().all().size() == 0){
-      app.contact().create(new ContactData().withFirstname("Valerie").
-              withLastname("Saryanidi").withAddress("Germany, Munich").
-              withHome_phone("+7 987 333 33 33").withEmail("vsaryanidi@gmail.com").withGroup("TestGroup"),true);
+      if (app.db().contacts().size() == 0){
+        app.contact().goToHomePage();
+        app.contact().create(new ContactData()
+                .withFirstname("Valerie")
+                .withLastname("Saryanidi")
+                .withHome_phone("+7 987 333 33 33")
+                .withMobile_phone("22222")
+                .withWork_phone("3333")
+                .withAddress("Germany, Munich")
+                .withEmail("vsaryanidi@gmail.com")
+                .withEmail1("5454@hff.gh")
+                .withEmail2("ghghgh@jfjf.ru")
+                .withPhoto(new File("src/test/resources/contacts.xml"))
+                .withGroup("TestGroup"),true);
     }
   }
 
   @Test
   public void testContactModification () {
 
-    Contacts before = app.contact().all();
+    Contacts before = app.db().contacts();
     ContactData modifiedContact = before.iterator().next();
-    ContactData contact = new ContactData().withId(modifiedContact.getId()).withFirstname("Valerie").
-            withLastname("Saryanidi").withAddress("Germany, Munich").
-            withHome_phone("+7 987 333 33 33").withEmail("vsaryanidi@gmail.com").withGroup("TestGroup");
+    app.contact().goToHomePage();
+    ContactData contact = new ContactData().withId(modifiedContact.getId())
+            .withFirstname("Valerie")
+            .withLastname("Saryanidi")
+            .withHome_phone("+7 987 333 33 33")
+            .withMobile_phone("22222")
+            .withWork_phone("3333")
+            .withAddress("Germany, Munich")
+            .withEmail("vsaryanidi@gmail.com")
+            .withEmail1("5454@hff.gh")
+            .withEmail2("ghghgh@jfjf.ru")
+            .withPhoto(new File("src/test/resources/contacts.xml"))
+            .withGroup("TestGroup");
     app.contact().modify(contact);
-    assertThat(app.contact().count(), equalTo(before.size()));
-    Contacts after = app.contact().all();
+    Contacts after = app.db().contacts();
+    assertEquals(app.contact().count(), before.size());
     assertThat(after, equalTo(before.without(modifiedContact).withAdded(contact)));
 
   }
