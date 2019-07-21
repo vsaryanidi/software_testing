@@ -4,6 +4,8 @@ import com.thoughtworks.xstream.XStream;
 import org.testng.annotations.*;
 import ru.sar.neo.addressbook.model.ContactData;
 import ru.sar.neo.addressbook.model.Contacts;
+import ru.sar.neo.addressbook.model.GroupData;
+import ru.sar.neo.addressbook.model.Groups;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -40,7 +42,9 @@ public class ContactCreationTests extends TestBase {
 
   public void testContactCreation(ContactData contact) throws Exception {
     app.contact().goToHomePage();
+    Groups groups = app.db().groups();
     Contacts before = app.db().contacts();
+    contact.withPhoto(new File("src/test/resources/photo_2019-07-17_20-05-36.jpg")).inGroup(groups.iterator().next());
     app.contact().gotoContactAddPage();
     app.contact().fillContactForm(contact,true);
     app.contact().submitContactCreation();
@@ -56,6 +60,7 @@ public class ContactCreationTests extends TestBase {
 
   @Test
   public void testBadContactCreation()  {
+    Groups groups = app.db().groups();
     app.contact().goToHomePage();
     Contacts before = app.db().contacts();
     app.contact().gotoContactAddPage();
@@ -70,7 +75,7 @@ public class ContactCreationTests extends TestBase {
             .withEmail1("5454@hff.gh")
             .withEmail2("ghghgh@jfjf.ru")
             .withPhoto(new File("src/test/resources/photo_2019-07-17_20-05-36.jpg"))
-            .withGroup("Group 2");
+            .inGroup(groups.iterator().next());
     app.contact().fillContactForm(contact,true);
     app.contact().submitContactCreation();
     app.contact().goToHomePage();

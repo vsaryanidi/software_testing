@@ -60,9 +60,17 @@ public class ContactDataGenerator {
   private void saveAsCsv(List<ContactData> contacts, File file) throws IOException {
     try(Writer writer = new FileWriter(file)) {
       for (ContactData contact : contacts) {
-        writer.write(String.format("%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s\n", contact.getFirstname(), contact.getLastname(),
-                contact.getHome_phone(), contact.getMobile_phone(), contact.getWork_phone(), contact.getAddress(),
-                contact.getEmail(), contact.getEmail1(), contact.getEmail2(), contact.getPhoto(), contact.getGroup()));
+        writer.write(String.format("%s;%s;%s;%s;%s;%s;%s;%s;%s;%s\n",
+                contact.getFirstname(),
+                contact.getLastname(),
+                contact.getHome_phone(),
+                contact.getMobile_phone(),
+                contact.getWork_phone(),
+                contact.getAddress(),
+                contact.getEmail(),
+                contact.getEmail1(),
+                contact.getEmail2(),
+                contact.getPhoto()));
       }
     }
   }
@@ -71,13 +79,16 @@ public class ContactDataGenerator {
     List<ContactData> contacts = new ArrayList<ContactData>();
     for (int i = 0; i < count; i++) {
       contacts.add(new ContactData()
-              .withFirstname(String.format("Firstname %s",i)).withLastname(String.format("Lastname %s",i))
-              .withHome_phone(String.format("Home_phone %s",i)).withMobile_phone(String.format("Mobile_phone %s",i))
+              .withFirstname(String.format("Firstname %s",i))
+              .withLastname(String.format("Lastname %s",i))
+              .withHome_phone(String.format("Home_phone %s",i))
+              .withMobile_phone(String.format("Mobile_phone %s",i))
               .withWork_phone(String.format("Work_phone %s",i))
-              .withAddress(String.format("Address %s",i)).withEmail(String.format("Email %s",i))
-              .withEmail1(String.format("Email1 %s",i)).withEmail2(String.format("Email2 %s",i))
-              .withPhoto(new File("src/test/resources/photo_2019-07-17_20-05-36.jpg"))
-              .withGroup(String.format("Group %s",i)));
+              .withAddress(String.format("Address %s",i))
+              .withEmail(String.format("Email %s",i))
+              .withEmail1(String.format("Email1 %s",i))
+              .withEmail2(String.format("Email2 %s",i))
+              .withPhoto(new File("src/test/resources/photo_2019-07-17_20-05-36.jpg")));
     }
     return contacts;
   }

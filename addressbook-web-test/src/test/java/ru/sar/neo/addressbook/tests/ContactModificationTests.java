@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import ru.sar.neo.addressbook.model.ContactData;
 import ru.sar.neo.addressbook.model.Contacts;
 import ru.sar.neo.addressbook.model.GroupData;
+import ru.sar.neo.addressbook.model.Groups;
 
 import java.io.File;
 import java.util.Comparator;
@@ -26,6 +27,8 @@ public class ContactModificationTests extends TestBase{
 
       if (app.db().contacts().size() == 0){
         app.contact().goToHomePage();
+        File photo = new File("src/test/resources/photo_2019-07-17_20-05-36.jpg");
+        Groups groups = app.db().groups();
         app.contact().create(new ContactData()
                 .withFirstname("Valerie")
                 .withLastname("Saryanidi")
@@ -37,17 +40,19 @@ public class ContactModificationTests extends TestBase{
                 .withEmail1("5454@hff.gh")
                 .withEmail2("ghghgh@jfjf.ru")
                 .withPhoto(new File("src/test/resources/photo_2019-07-17_20-05-36.jpg"))
-                .withGroup("TestGroup"),true);
+                .inGroup(groups.iterator().next()),true);
     }
   }
 
   @Test
   public void testContactModification () {
-
+    app.contact().goToHomePage();
+    File photo = new File("src/test/resources/photo_2019-07-17_20-05-36.jpg");
+    Groups groups = app.db().groups();
     Contacts before = app.db().contacts();
     ContactData modifiedContact = before.iterator().next();
-    app.contact().goToHomePage();
-    ContactData contact = new ContactData().withId(modifiedContact.getId())
+    ContactData contact = new ContactData()
+            .withId(modifiedContact.getId())
             .withFirstname("Valerie")
             .withLastname("Saryanidi")
             .withHome_phone("+7 987 333 33 33")
@@ -58,7 +63,7 @@ public class ContactModificationTests extends TestBase{
             .withEmail1("5454@hff.gh")
             .withEmail2("ghghgh@jfjf.ru")
             .withPhoto(new File("src/test/resources/photo_2019-07-17_20-05-36.jpg"))
-            .withGroup("TestGroup");
+            .inGroup(groups.iterator().next());
     app.contact().modify(contact);
     Contacts after = app.db().contacts();
     assertEquals(app.contact().count(), before.size());
