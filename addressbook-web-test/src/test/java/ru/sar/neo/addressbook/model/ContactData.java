@@ -2,31 +2,74 @@ package ru.sar.neo.addressbook.model;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
+import org.hibernate.annotations.Type;
 
+import javax.persistence.*;
 import java.io.File;
 import java.util.Objects;
 
+@Entity
+@Table(name = "addressbook")
+
 @XStreamAlias("contact")
+
 public class ContactData {
 @XStreamOmitField
-  private int id = Integer.MAX_VALUE;;
+
+@Id
+@Column(name = "id")
+  private int id = Integer.MAX_VALUE;
+
+  @Column(name = "address")
+  @Type(type = "text")
   private String address;
+
+  @Column(name = "firstname")
   private String firstname;
+
+  @Column(name = "lastname")
   private String lastname;
+
+  @Column(name = "home")
+  @Type(type = "text")
   private String home_phone;
+
+  @Column(name = "mobile")
+  @Type(type = "text")
   private String mobile_phone;
+
+  @Column(name = "work")
+  @Type(type = "text")
   private String work_phone;
+
+  @Column(name = "email")
+  @Type(type = "text")
   private String email;
+
+  @Column(name = "email2")
+  @Type(type = "text")
   private String email1;
+
+  @Column(name = "email3")
+  @Type(type = "text")
   private String email2;
+
+  @Transient
   private String group;
+
+  @Transient
   private String allPhones;
+
+  @Transient
   private String allMails;
-  private File photo;
+
+  @Column(name = "photo")
+  @Type(type = "text")
+  private String photo;
 
 
   public ContactData withPhoto(File photo) {
-    this.photo = photo;
+    this.photo = photo.getPath();
     return this;
   }
 
@@ -99,7 +142,7 @@ public class ContactData {
 
 
   public File getPhoto() {
-    return photo;
+    return new File (photo);
   }
 
   public String getAllMails() {

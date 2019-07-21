@@ -37,6 +37,9 @@
         <!-- Names the annotated entity class -->
         <mapping class="ru.sar.neo.addressbook.model.GroupData"/>
 
+        <!-- Names the annotated entity class -->
+        <mapping class="ru.sar.neo.addressbook.model.ContactData"/>
+
     </session-factory>
 
 </hibernate-configuration>
