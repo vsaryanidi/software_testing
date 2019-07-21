@@ -36,7 +36,7 @@ public class ContactModificationTests extends TestBase{
                 .withEmail("vsaryanidi@gmail.com")
                 .withEmail1("5454@hff.gh")
                 .withEmail2("ghghgh@jfjf.ru")
-                .withPhoto(new File("src/test/resources/contacts.xml"))
+                .withPhoto(new File("src/test/resources/photo_2019-07-17_20-05-36.jpg"))
                 .withGroup("TestGroup"),true);
     }
   }
@@ -57,13 +57,14 @@ public class ContactModificationTests extends TestBase{
             .withEmail("vsaryanidi@gmail.com")
             .withEmail1("5454@hff.gh")
             .withEmail2("ghghgh@jfjf.ru")
-            .withPhoto(new File("src/test/resources/contacts.xml"))
+            .withPhoto(new File("src/test/resources/photo_2019-07-17_20-05-36.jpg"))
             .withGroup("TestGroup");
     app.contact().modify(contact);
     Contacts after = app.db().contacts();
     assertEquals(app.contact().count(), before.size());
     assertThat(after, equalTo(before.without(modifiedContact).withAdded(contact)));
 
+    verifyContactListInUI();
   }
 
 

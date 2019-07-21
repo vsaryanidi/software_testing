@@ -10,7 +10,7 @@
     <email1>Email1 0</email1>
     <email2>Email2 0</email2>
     <group>Group 0</group>
-    <photo>src\test\resources\contacts.xml</photo>
+    <photo>src\test\resources\photo_2019-07-17_20-05-36.jpg</photo>
   </contact>
   <contact>
     <address>Address 1</address>
@@ -23,7 +23,7 @@
     <email1>Email1 1</email1>
     <email2>Email2 1</email2>
     <group>Group 1</group>
-    <photo>src\test\resources\contacts.xml</photo>
+    <photo>src\test\resources\photo_2019-07-17_20-05-36.jpg</photo>
   </contact>
   <contact>
     <address>Address 2</address>
@@ -36,6 +36,6 @@
     <email1>Email1 2</email1>
     <email2>Email2 2</email2>
     <group>Group 2</group>
-    <photo>src\test\resources\contacts.xml</photo>
+    <photo>src\test\resources\photo_2019-07-17_20-05-36.jpg</photo>
   </contact>
 </list>

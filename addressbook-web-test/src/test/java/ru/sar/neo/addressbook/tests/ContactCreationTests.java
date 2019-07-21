@@ -49,6 +49,8 @@ public class ContactCreationTests extends TestBase {
     assertThat(app.contact().count(), equalTo(before.size() + 1));
     assertThat(after, equalTo(
             before.withAdded(contact.withId(after.stream().mapToInt((c) -> c.getId()).max().getAsInt()))));
+
+    verifyContactListInUI();
   }
 
 
@@ -67,14 +69,16 @@ public class ContactCreationTests extends TestBase {
             .withEmail("vsaryanidi@gmail.com")
             .withEmail1("5454@hff.gh")
             .withEmail2("ghghgh@jfjf.ru")
-            .withPhoto(new File("src/test/resources/contacts.xml"))
-            .withGroup("Group 0");
+            .withPhoto(new File("src/test/resources/photo_2019-07-17_20-05-36.jpg"))
+            .withGroup("Group 2");
     app.contact().fillContactForm(contact,true);
     app.contact().submitContactCreation();
     app.contact().goToHomePage();
     Contacts after = app.db().contacts();
     assertThat(app.contact().count(), equalTo(before.size()));
     assertThat(after, equalTo(before));
+
+    verifyContactListInUI();
   }
 
 }
