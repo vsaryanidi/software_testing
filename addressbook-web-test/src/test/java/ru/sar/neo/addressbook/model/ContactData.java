@@ -142,7 +142,7 @@ public class ContactData {
 
 
   public File getPhoto() {
-    return new File (photo);
+    return new File(photo);
   }
 
   public String getAllMails() {
@@ -199,27 +199,33 @@ public class ContactData {
 
 
   @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    ContactData that = (ContactData) o;
+    return id == that.id &&
+            Objects.equals(address, that.address) &&
+            Objects.equals(firstname, that.firstname) &&
+            Objects.equals(lastname, that.lastname) &&
+            Objects.equals(home_phone, that.home_phone) &&
+            Objects.equals(mobile_phone, that.mobile_phone) &&
+            Objects.equals(work_phone, that.work_phone) &&
+            Objects.equals(email, that.email) &&
+            Objects.equals(email1, that.email1) &&
+            Objects.equals(email2, that.email2);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(id, address, firstname, lastname, home_phone, mobile_phone, work_phone, email, email1, email2);
+  }
+  @Override
   public String toString() {
     return "ContactData{" +
             "id=" + id +
             ", firstname='" + firstname + '\'' +
             ", lastname='" + lastname + '\'' +
             '}';
-  }
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) return true;
-    if (o == null || getClass() != o.getClass()) return false;
-    ContactData that = (ContactData) o;
-    return id == that.id &&
-            Objects.equals(firstname, that.firstname) &&
-            Objects.equals(lastname, that.lastname);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(id, firstname, lastname);
   }
 
 }
