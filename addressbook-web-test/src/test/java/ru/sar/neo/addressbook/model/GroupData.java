@@ -87,15 +87,16 @@ public class GroupData {
   public boolean equals(Object o) {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
-    GroupData groupData = (GroupData) o;
-    return id == groupData.id &&
-            Objects.equals(name, groupData.name);
+    GroupData groupDate = (GroupData) o;
+    return id == groupDate.id &&
+            Objects.equals(name, groupDate.name) &&
+            Objects.equals(header, groupDate.header) &&
+            Objects.equals(footer, groupDate.footer);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name);
+    return Objects.hash(id, name, header, footer);
   }
-
 
 }

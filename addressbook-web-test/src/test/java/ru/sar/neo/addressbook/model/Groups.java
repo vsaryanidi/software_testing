@@ -3,6 +3,7 @@ package ru.sar.neo.addressbook.model;
 import com.google.common.collect.ForwardingSet;
 import ru.sar.neo.addressbook.model.GroupData;
 
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -18,6 +19,11 @@ public class Groups extends ForwardingSet<GroupData> {
   public Groups() {
     this.delegate = new HashSet<>();
   }
+
+  public Groups(Collection<GroupData> groups) {
+    this.delegate = new HashSet<GroupData>(groups);
+  }
+
 
   @Override
   protected Set<GroupData> delegate() {
