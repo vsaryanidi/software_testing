@@ -10,6 +10,7 @@
     <email1>Email1 0</email1>
     <email2>Email2 0</email2>
     <photo>src\test\resources\photo_2019-07-17_20-05-36.jpg</photo>
+    <groups/>
   </contact>
   <contact>
     <address>Address 1</address>
@@ -22,6 +23,7 @@
     <email1>Email1 1</email1>
     <email2>Email2 1</email2>
     <photo>src\test\resources\photo_2019-07-17_20-05-36.jpg</photo>
+    <groups/>
   </contact>
   <contact>
     <address>Address 2</address>
