@@ -21,6 +21,14 @@ import static org.hamcrest.CoreMatchers.equalTo;
 
 public class ContactCreationTests extends TestBase {
 
+  @BeforeTest
+  public void ensurePreconditions () {
+    if (app.db().groups().size() == 0) {
+      app.goTo().groupPage();
+      app.group().create(new GroupData().withName("group1"));
+    }
+  }
+
   @DataProvider
 
   public Iterator<Object[]> validContacts() throws IOException {
@@ -41,8 +49,8 @@ public class ContactCreationTests extends TestBase {
   @Test (dataProvider = "validContacts")
 
   public void testContactCreation(ContactData contact) throws Exception {
-    app.contact().goToHomePage();
     Groups groups = app.db().groups();
+    app.contact().goToHomePage();
     Contacts before = app.db().contacts();
     contact.withPhoto(new File("src/test/resources/photo_2019-07-17_20-05-36.jpg")).inGroup(groups.iterator().next());
     app.contact().gotoContactAddPage();
