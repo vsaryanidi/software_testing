@@ -147,5 +147,13 @@ public class ContactHelper extends HelperBase{
     wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
   }
 
+  public void addContactToGroup(ContactData contact) {
+    selectContactById(contact.getId());
+    new Select(wd.findElement(By.name("to_group"))).selectByVisibleText(contact.getGroups().iterator().next().getName());
+    wd.findElement(By.name("add")).click();
+    wd.findElement(By.xpath("//h1[text()='Groups']"));
+    wd.findElement(By.cssSelector("a[href='./?group="+contact.getGroups().iterator().next().getId()+"']")).click();
   }
+
+}
 
