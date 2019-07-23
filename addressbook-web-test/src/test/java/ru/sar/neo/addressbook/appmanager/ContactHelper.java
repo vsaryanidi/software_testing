@@ -153,6 +153,7 @@ public class ContactHelper extends HelperBase {
   }
 
   public void addContactToGroup(ContactData contact) {
+    Assert.assertEquals(contact.getGroups().size(), 1);
     selectContactById(contact.getId());
     new Select(wd.findElement(By.name("to_group"))).selectByVisibleText(contact.getGroups().iterator().next().getName());
     wd.findElement(By.name("add")).click();

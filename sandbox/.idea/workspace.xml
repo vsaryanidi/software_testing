@@ -87,7 +87,7 @@
           <entry key="csv" value="13" />
           <entry key="gradle" value="21" />
           <entry key="gradlew" value="1" />
-          <entry key="java" value="659" />
+          <entry key="java" value="662" />
           <entry key="jpg" value="1" />
           <entry key="log" value="2" />
           <entry key="properties" value="3" />
@@ -99,7 +99,7 @@
           <entry key="CLASS" value="1" />
           <entry key="Groovy" value="21" />
           <entry key="Image" value="1" />
-          <entry key="JAVA" value="659" />
+          <entry key="JAVA" value="662" />
           <entry key="PLAIN_TEXT" value="18" />
           <entry key="Properties" value="3" />
           <entry key="XML" value="30" />
@@ -110,14 +110,14 @@
           <entry key="csv" value="2" />
           <entry key="dummy" value="198" />
           <entry key="gradle" value="162" />
-          <entry key="java" value="16706" />
+          <entry key="java" value="16769" />
           <entry key="xml" value="52" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="162" />
-          <entry key="JAVA" value="16706" />
+          <entry key="JAVA" value="16769" />
           <entry key="PLAIN_TEXT" value="200" />
           <entry key="XML" value="52" />
         </counts>
@@ -129,36 +129,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/appmanager/ContactHelper.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/tests/AddContactToGroup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="171" column="1" selection-start-line="171" selection-start-column="1" selection-end-line="171" selection-end-column="1" />
+            <state relative-caret-position="524">
+              <caret line="38" column="40" lean-forward="true" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
               <folding>
-                <element signature="e#536#537#0" expanded="true" />
-                <element signature="e#572#573#0" expanded="true" />
-                <element signature="e#685#686#0" expanded="true" />
-                <element signature="e#738#739#0" expanded="true" />
-                <element signature="e#782#783#0" expanded="true" />
-                <element signature="e#859#860#0" expanded="true" />
-                <element signature="e#1974#1975#0" expanded="true" />
-                <element signature="e#2008#2009#0" expanded="true" />
-                <element signature="e#2687#2688#0" expanded="true" />
-                <element signature="e#2743#2744#0" expanded="true" />
-                <element signature="e#2767#2768#0" expanded="true" />
-                <element signature="e#2829#2830#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/tests/AddContactToGroup.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/appmanager/ContactHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="39" column="3" lean-forward="true" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
+            <state relative-caret-position="75">
+              <caret line="155" column="31" selection-start-line="155" selection-start-column="31" selection-end-line="155" selection-end-column="31" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#536#537#0" expanded="true" />
+                <element signature="e#572#573#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -167,20 +157,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/tests/RemoveContactFromGroup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="58" column="1" lean-forward="true" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
+            <state relative-caret-position="301">
+              <caret line="66" column="43" selection-start-line="66" selection-start-column="43" selection-end-line="66" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/tests/ContactModificationTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="43" column="5" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="43" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -1035,8 +1016,8 @@
         <option value="$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/appmanager/DbHelper.java" />
         <option value="$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/model/GroupData.java" />
         <option value="$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/appmanager/ContactHelper.java" />
-        <option value="$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/tests/AddContactToGroup.java" />
         <option value="$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/tests/RemoveContactFromGroup.java" />
+        <option value="$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/tests/AddContactToGroup.java" />
       </list>
     </option>
   </component>
@@ -1476,7 +1457,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563891512619" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563893377577" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../addressbook-web-test" />
@@ -1546,7 +1527,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddContactToGroupTests.testAddContactToGroup" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AddContactToGroup.testAddContactToGroup" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-test_test" />
       <extension name="coverage">
         <pattern>
@@ -1555,25 +1536,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.sar.neo.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="ru.sar.neo.addressbook.tests.AddContactToGroupTests" />
+      <option name="MAIN_CLASS_NAME" value="ru.sar.neo.addressbook.tests.AddContactToGroup" />
       <option name="METHOD_NAME" value="testAddContactToGroup" />
       <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ContactCreationTests" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-test_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.sar.neo.addressbook.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.sar.neo.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="ru.sar.neo.addressbook.tests.ContactCreationTests" />
       <properties />
       <listeners />
       <method v="2">
@@ -1596,20 +1561,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RemoveContactFromGroup.testRemoveContactFromGroup" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="addressbook-web-test_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.sar.neo.addressbook.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.sar.neo.addressbook.tests" />
+      <option name="MAIN_CLASS_NAME" value="ru.sar.neo.addressbook.tests.RemoveContactFromGroup" />
+      <option name="METHOD_NAME" value="testRemoveContactFromGroup" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="TestNG.ContactCreationTests" />
       <item itemvalue="TestNG.AddContactToGroupTests" />
-      <item itemvalue="TestNG.AddContactToGroupTests.testAddContactToGroup" />
       <item itemvalue="TestNG.AddContactToGroup" />
       <item itemvalue="TestNG.RemoveContactFromGroup" />
+      <item itemvalue="TestNG.RemoveContactFromGroup.testRemoveContactFromGroup" />
+      <item itemvalue="TestNG.AddContactToGroup.testAddContactToGroup" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.RemoveContactFromGroup" />
         <item itemvalue="TestNG.AddContactToGroup" />
+        <item itemvalue="TestNG.AddContactToGroup.testAddContactToGroup" />
+        <item itemvalue="TestNG.RemoveContactFromGroup.testRemoveContactFromGroup" />
         <item itemvalue="TestNG.AddContactToGroupTests" />
-        <item itemvalue="TestNG.AddContactToGroupTests.testAddContactToGroup" />
-        <item itemvalue="TestNG.ContactCreationTests" />
       </list>
     </recent_temporary>
   </component>
@@ -1627,34 +1610,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AddContactToGroupTests_testAddContactToGroup - 2019.07.23 at 16h 16m 42s.xml">
-      <configuration name="AddContactToGroupTests.testAddContactToGroup" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="AddContactToGroupTests - 2019.07.23 at 16h 17m 33s.xml">
-      <configuration name="AddContactToGroupTests" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="AddContactToGroupTests - 2019.07.23 at 16h 36m 40s.xml">
-      <configuration name="AddContactToGroupTests" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="AddContactToGroupTests - 2019.07.23 at 16h 38m 19s.xml">
-      <configuration name="AddContactToGroupTests" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="AddContactToGroupTests - 2019.07.23 at 16h 41m 56s.xml">
-      <configuration name="AddContactToGroupTests" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="AddContactToGroup - 2019.07.23 at 17h 54m 04s.xml">
-      <configuration name="AddContactToGroup" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="AddContactToGroup - 2019.07.23 at 17h 55m 46s.xml">
-      <configuration name="AddContactToGroup" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="AddContactToGroup - 2019.07.23 at 17h 56m 57s.xml">
-      <configuration name="AddContactToGroup" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="AddContactToGroup - 2019.07.23 at 17h 58m 22s.xml">
       <configuration name="AddContactToGroup" configurationId="TestNG" />
     </history-entry>
     <history-entry file="AddContactToGroup - 2019.07.23 at 18h 09m 21s.xml">
+      <configuration name="AddContactToGroup" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="AddContactToGroup - 2019.07.23 at 18h 18m 10s.xml">
+      <configuration name="AddContactToGroup" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="RemoveContactFromGroup - 2019.07.23 at 18h 18m 46s.xml">
+      <configuration name="RemoveContactFromGroup" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="AddContactToGroup - 2019.07.23 at 18h 25m 46s.xml">
+      <configuration name="AddContactToGroup" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="RemoveContactFromGroup_testRemoveContactFromGroup - 2019.07.23 at 18h 38m 44s.xml">
+      <configuration name="RemoveContactFromGroup.testRemoveContactFromGroup" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="AddContactToGroup - 2019.07.23 at 18h 39m 45s.xml">
+      <configuration name="AddContactToGroup" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="AddContactToGroup_testAddContactToGroup - 2019.07.23 at 18h 42m 12s.xml">
+      <configuration name="AddContactToGroup.testAddContactToGroup" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="AddContactToGroup - 2019.07.23 at 18h 45m 02s.xml">
+      <configuration name="AddContactToGroup" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="AddContactToGroup - 2019.07.23 at 18h 46m 51s.xml">
       <configuration name="AddContactToGroup" configurationId="TestNG" />
     </history-entry>
   </component>
@@ -1671,7 +1654,7 @@
     <frame x="-12" y="0" width="1386" height="788" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.25188538" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.25188538" />
       <window_info id="Structure" order="1" sideWeight="0.502439" side_tool="true" weight="0.2730711" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -1680,7 +1663,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.502439" side_tool="true" weight="0.2730711" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" x="22" y="256" width="1322" height="216" id="Run" order="2" visible="true" weight="0.36641222" />
+      <window_info active="true" anchor="bottom" x="22" y="256" width="1322" height="216" id="Run" order="2" visible="true" weight="0.39541984" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.519084" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -2030,6 +2013,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-129">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#424#425#0" expanded="true" />
+            <element signature="e#465#466#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2066,16 +2054,6 @@
             <element signature="e#1384#1395#0" expanded="true" />
             <element signature="e#3675#3676#0" expanded="true" />
             <element signature="e#3710#3711#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/tests/ContactCreationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="52" column="4" lean-forward="true" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2119,38 +2097,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/appmanager/ContactHelper.java">
+    <entry file="file://$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/tests/ContactModificationTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="171" column="1" selection-start-line="171" selection-start-column="1" selection-end-line="171" selection-end-column="1" />
+        <state relative-caret-position="323">
+          <caret line="43" column="5" selection-start-line="29" selection-start-column="7" selection-end-line="43" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/tests/ContactCreationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="52" column="33" lean-forward="true" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
           <folding>
-            <element signature="e#536#537#0" expanded="true" />
-            <element signature="e#572#573#0" expanded="true" />
-            <element signature="e#685#686#0" expanded="true" />
-            <element signature="e#738#739#0" expanded="true" />
-            <element signature="e#782#783#0" expanded="true" />
-            <element signature="e#859#860#0" expanded="true" />
-            <element signature="e#1974#1975#0" expanded="true" />
-            <element signature="e#2008#2009#0" expanded="true" />
-            <element signature="e#2687#2688#0" expanded="true" />
-            <element signature="e#2743#2744#0" expanded="true" />
-            <element signature="e#2767#2768#0" expanded="true" />
-            <element signature="e#2829#2830#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/tests/ContactModificationTests.java">
+    <entry file="file://$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/appmanager/ContactHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="43" column="5" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="43" selection-end-column="5" />
+        <state relative-caret-position="75">
+          <caret line="155" column="31" selection-start-line="155" selection-start-column="31" selection-end-line="155" selection-end-column="31" />
+          <folding>
+            <element signature="e#536#537#0" expanded="true" />
+            <element signature="e#572#573#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/tests/RemoveContactFromGroup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="58" column="1" lean-forward="true" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
+        <state relative-caret-position="301">
+          <caret line="66" column="43" selection-start-line="66" selection-start-column="43" selection-end-line="66" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -2159,8 +2137,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../addressbook-web-test/src/test/java/ru/sar/neo/addressbook/tests/AddContactToGroup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="3" lean-forward="true" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
+        <state relative-caret-position="524">
+          <caret line="38" column="40" lean-forward="true" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

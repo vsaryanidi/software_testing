@@ -16,12 +16,16 @@ public class AddContactToGroup extends TestBase {
 
   @BeforeTest
   public void ensurePrecondition () {
+
     Groups groups = app.db().groups();
     app.contact().goToHomePage();
+
     if (app.db().groups().size() == 0) {
       app.goTo().groupPage();
       app.group().create(new GroupData().withName("Group 1"));
     }
+
+    Groups group = app.db().groups();
     if (app.db().contacts().size() == 0) {
       File photo = new File("src/test/resources/photo_2019-07-17_20-05-36.jpg");
       app.contact().create(new ContactData()
@@ -34,21 +38,21 @@ public class AddContactToGroup extends TestBase {
               .withEmail("vsaryanidi@gmail.com")
               .withEmail1("5454@hff.gh")
               .withEmail2("ghghgh@jfjf.ru")
-              .withPhoto(new File("src/test/resources/photo_2019-07-17_20-05-36.jpg"))
-              .inGroup(groups.iterator().next()),true);
+              .withPhoto(photo)
+              .inGroup(group.iterator().next()),true);
     }
   }
 
   @Test
   public void testAddContactToGroup () {
-    app.contact().goToHomePage();
     ContactData contactBefore = app.db().contacts().iterator().next();
-    GroupData groupBefore= app.db().groups().iterator().next();
+    GroupData groupBefore = app.db().groups().iterator().next();
+    app.contact().goToHomePage();
     app.contact().addContactToGroup(contactBefore.inGroup(groupBefore));
     app.db().refreshContact(contactBefore);
     app.db().refreshGroup(groupBefore);
     ContactData afterContactToAddGroup = app.db().contacts().iterator().next();
-    GroupData afterGroupToAdd= app.db().groups().iterator().next();
+    GroupData afterGroupToAdd = app.db().groups().iterator().next();
     assertThat(afterContactToAddGroup.getGroups(), hasItem(groupBefore));
     assertThat(afterGroupToAdd.getContacts(), hasItem(contactBefore));
   }
