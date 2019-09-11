@@ -1,8 +1,6 @@
 package ru.sar.neo.addressbook.tests;
 
 import org.hamcrest.CoreMatchers;
-import org.hibernate.sql.Select;
-import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -12,9 +10,7 @@ import ru.sar.neo.addressbook.model.Groups;
 
 import java.io.File;
 
-import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.hasItem;
 
 public class RemoveContactFromGroup extends TestBase{
 
@@ -64,7 +60,7 @@ public class RemoveContactFromGroup extends TestBase{
     app.db().refreshGroup(groupBefore);
     ContactData afterContactRemoveFromGroup = app.db().contacts().iterator().next();
     GroupData afterGroup= app.db().groups().iterator().next();
-    assertThat(afterContactRemoveFromGroup.getGroups(), not(groupBefore));
-    assertThat(afterGroup.getContacts(), not(contactBefore));
+    assertThat(afterContactRemoveFromGroup.getGroups(), CoreMatchers.not(groupBefore));
+    assertThat(afterGroup.getContacts(), CoreMatchers.not(contactBefore));
   }
 }
